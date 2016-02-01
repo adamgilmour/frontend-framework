@@ -1,6 +1,6 @@
 # Frontend Framework
 
-Originally forked from [https://github.com/adamgilmour/frontend-framework](https://github.com/adamgilmour/frontend-framework)
+Originally forked from [https://github.com/danielmorgan/frontend-boilerplate](https://github.com/danielmorgan/frontend-boilerplate)
 
 ---------------------------------------------------------------------------------------------------------------
 
