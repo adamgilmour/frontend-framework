@@ -1,0 +1,46 @@
+/* =============================================================================
+// TRANSITIONS
+/* ============================================================================= */
+
+@mixin transition($duration) {
+    transition: $duration;
+}
+
+
+
+
+/* =============================================================================
+// MEDIA QUERIES
+/* ============================================================================= */
+
+$mobile-y: 320px;
+$mobile-x: 480px;
+$tablet-y: 767px;
+$tablet-x: 992px;
+$desktop: 1200px;
+
+@mixin mobile-y {
+	@media (min-width: #{$mobile-y}) {
+		@content;
+	}
+}
+@mixin mobile-x {
+	@media (min-width: #{$mobile-x}) {
+		@content;
+	}
+}
+@mixin tablet-y {
+	@media (min-width: #{$tablet-y}) {
+		@content;
+	}
+}
+@mixin tablet-x {
+	@media (min-width: #{$tablet-x}) {
+		@content; 
+	}
+}
+@mixin desktop {
+	@media (min-width: #{$desktop}) {
+		@content;
+	}
+}

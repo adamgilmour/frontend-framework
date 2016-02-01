@@ -1,0 +1,26 @@
+#footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background: #000;
+	text-align: center;
+	padding: 10px 0;
+	clear: both;
+	font-size: 10px;
+}
+.footer-links {
+	
+	li {
+		display: inline-block;
+
+		a {
+			color: #fff;
+			padding: 0 20px;
+		}
+	}
+
+}
+.credit {
+	margin-top: 10px;
+}

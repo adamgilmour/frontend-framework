@@ -1,0 +1,226 @@
+.feature-title {
+	
+	h2 {
+		position: relative;
+		display: inline-block;
+		margin-bottom: 20px;
+
+		@include mobile-x {
+			position: relative;
+			display: inline-block;
+			margin-bottom: 20px;
+		}
+
+		&:before,&:after {
+			content: "";
+			background: #000;
+			height: 1px;
+			position: absolute;
+
+			@include mobile-x {
+				top: 13px;
+			    width: 100px;
+			}
+
+		}
+		&:after {
+			right: 50%;
+			margin-right: -50px;
+			bottom: -7px;
+
+			@include mobile-x {
+				right: -60px;
+			}
+
+		}
+		&:before {
+			display: none;
+
+			@include mobile-x {
+				left: -100px;
+				margin-left: -10px;
+				margin-right: 10px;
+				display: block;
+			}
+
+		}
+
+	}
+}
+
+.index-links {
+	a {
+		color: #000;
+	}
+
+	.item {
+		border:1px solid #000;
+		padding: 50px 10px;
+		margin-bottom: 30px;
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 10px;
+		@include transition(.2s);
+
+		&:hover {
+			background: #000;
+			color: #fff;
+			border:1px solid #000;
+		}
+	}
+}
+
+
+
+.intro-scroll {
+	background: url(../img/index/pattern.png);
+}
+
+.bootstrap {
+	
+	.block {
+	    background: #ECEFF1;
+	    border: 1px solid #CFD8DC;
+	    padding: 10px;
+	    margin-bottom: 30px;
+	}
+
+}
+
+.tooltips {
+	clear: both;
+	text-align: center;
+	font-size: 0;
+
+	button {
+		font-size: 14px;
+		margin: 0 auto 10px;
+		display: block;
+
+		@include tablet-x {
+			margin: 0 5px 10px;
+			display: inline-block;
+		}
+
+	}
+
+}
+
+
+
+.fancybox {
+
+	img {
+		border: 3px solid #e3e3e3;
+	    height: auto;
+	    width: 100%;
+	    padding: 1px;
+	}
+	h3 {
+		margin-bottom: 20px;
+	}
+	.item {
+		margin-bottom: 30px;
+	}
+}
+
+.owlcarousels {
+	
+	h3 {
+		margin: 20px 0;
+	}
+
+	img {
+		width: 100%;
+	}
+
+	.synced-owl {
+		margin: 0 0px 0 -10px;
+
+		.owl-item {
+			padding: 0 5px;
+		}
+		#owl-main {
+			margin: 0 10px 0 5px;
+		}
+		#owl-thumbs {
+			margin: 10px 10px 0 5px;
+
+			img {
+				cursor: pointer;
+			}
+		}
+	}
+
+	.standard-owl {
+		margin: 0 -5px;
+
+		h4 {
+			margin: 5px 0;
+		}
+
+		.item {
+			margin: 0 5px;
+		}
+	}
+
+}
+
+.parallaxsection {
+	.parallax {
+		background-image: url(../img/index/parallax.jpg);
+		position: relative;
+		height: 700px;
+		width: 100%;
+	}
+	.feature-title {
+		position: absolute;
+		bottom: 50px;
+		color: #fff;
+		width: 100%;
+
+		h2 {
+			font-size: 50px;
+			font-weight: 900;
+
+			&:before,&:after {
+				background: #fff;
+				top: 26px;
+			}
+
+		}
+	}
+}
+
+
+.customformsection {
+
+	h3 {
+		margin-bottom: 20px;
+	}
+	.custom-select {
+		width: 250px;
+	}
+}
+
+.accordion {
+	margin-bottom: 10px;
+}
+.accordion:last-child {
+	margin: 0;
+}
+.accordion-header {
+	background: #ddd;
+	padding: 10px 20px;
+	cursor: pointer;
+	text-transform: uppercase;
+	font-size: 10px;
+}
+.accordion-content {
+    display: none;
+    overflow: hidden;
+}
+.accordion-content .inner {
+	background: #eee;
+	padding: 20px;
+}

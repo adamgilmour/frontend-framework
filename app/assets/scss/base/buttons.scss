@@ -1,0 +1,25 @@
+/* =============================================================================
+// BUTTONS
+/* ============================================================================= */
+
+.button {
+    background: $brand-primary;
+    border: 0;
+    padding: 10px 20px;
+    color: white; 
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover {
+        background: saturate($brand-primary, 30%); 
+        text-decoration: none;
+        color: white; 
+    }
+}  
+.btn-small { 
+    font-size: 16px;
+    padding: 5px 15px;
+}

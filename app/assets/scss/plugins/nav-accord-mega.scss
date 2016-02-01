@@ -1,0 +1,287 @@
+/*disable scroll when mobile menu active*/
+body.no-scroll {
+  overflow-y: hidden;
+}
+
+/*mobile toggle button*/
+.mobile-toggle {
+  float: right;
+  cursor: pointer;
+  display: block;
+  height: 45px;
+  width: 60px;
+  position: relative;
+  outline: none;
+}
+
+    @include tablet-x {
+      .mobile-toggle {
+        display: none;
+      }
+    }
+
+.mobile-toggle span {
+  -moz-user-select: none;
+  background-color: #000;
+  display: block;
+  font-size: 0;
+  height: 2px;
+  margin-top: -2px;
+  position: absolute;
+  top: 50%;
+  width: 30px;
+  right: 15px;
+}
+
+.mobile-toggle.active span {
+  background-color: transparent;
+}
+
+.mobile-toggle.active span:before {
+  transform: translateY(0px) rotate(45deg);
+}
+
+.mobile-toggle.active span:after {
+  transform: translateY(0px) rotate(-45deg);
+}
+
+.mobile-toggle span:before, .mobile-toggle span:after {
+  background: #000;
+  content: "";
+  height: 100%;
+  position: absolute;
+  transition: transform 0.3s ease 0s;
+  width: 30px;
+}
+
+.mobile-toggle span:before {
+  transform: translateY(-10px);
+}
+
+.mobile-toggle span:after {
+  transform: translateY(10px);
+}
+
+/*nav*/
+#primary-nav {
+  background: #000;
+  display: none;
+  width: 100%;
+  float: none;
+  clear: both;
+  /*first level*/
+}
+
+    @include tablet-x {
+      #primary-nav {
+        display: block;
+        clear: none;
+        width: auto;
+        float: right;
+        padding: 25px 30px 0 0;
+        background: none;
+      }
+    }
+
+#primary-nav a {
+  display: block;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+#primary-nav a:hover,
+#primary-nav a:focus {
+  background: #2BABE2;
+  color: #fff;
+  text-decoration: none;
+}
+
+@include tablet-x {
+  #primary-nav a:hover,
+  #primary-nav a:focus {
+    background: none;
+    color: #000;
+  }
+  #primary-nav a:after {
+    background: #2BABE2;
+    content: "";
+    height: 2px;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    transform: translateY(-2px);
+    transition: opacity 0.3s ease 0s, transform 0.3s ease 0s;
+    width: 100%;
+  }
+}
+
+#primary-nav > ul > li {
+  position: relative;
+  border-top: 1px solid #333;
+  float: none;
+  padding: 0;
+}
+
+@include tablet-x {
+  #primary-nav > ul > li {
+    float: left;
+    padding: 0 0 0 30px;
+    border: none;
+    position: static;
+  }
+  #primary-nav > ul > li.open > a:after {
+    opacity: 1;
+    transform: translateY(-17px);
+  }
+}
+
+#primary-nav > ul > li > a {
+  padding: 15px;
+}
+
+@include tablet-x {
+  #primary-nav > ul > li > a {
+    color: #2BABE2;
+    text-decoration: none;
+    padding: 0 0 25px;
+    position: relative;
+    color: #000;
+    text-shadow: none;
+  }
+  #primary-nav > ul > li > a:hover:after {
+    opacity: 1;
+    transform: translateY(-17px);
+  }
+}
+
+#primary-nav > ul > li:first-child {
+  border: none;
+}
+
+#primary-nav > ul > li.active > span:after {
+  transform: translateY(0px) rotate(90deg);
+}
+
+#primary-nav span {
+  position: absolute;
+  float: right;
+  width: 62px;
+  height: 50px;
+  right: 0;
+  top: 0;
+  text-align: center;
+  cursor: pointer;
+}
+
+#primary-nav span:before {
+  transform: translateY(0px) rotate(90deg);
+}
+
+#primary-nav span:before, #primary-nav span:after {
+  background: #fff;
+  content: "";
+  height: 50%;
+  position: absolute;
+  top: 25%;
+  transition: transform 0.3s ease 0s;
+  width: 1px;
+}
+
+#primary-nav .dropdown-menu {
+  display: none;
+  position: relative;
+  background: none;
+  padding: 10px 16px 10px 30px;
+  background: #151515;
+}
+
+@include tablet-x {
+  #primary-nav .dropdown-menu {
+    background: #000;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    left: 0;
+    padding: 20px;
+    z-index: 9999;
+  }
+}
+
+#primary-nav .dropdown-menu ul {
+  display: none;
+  padding: 10px 0;
+}
+
+@include tablet-x {
+  #primary-nav .dropdown-menu ul {
+    display: block;
+  }
+}
+
+#primary-nav .dropdown-menu > li {
+  float: none;
+  width: auto;
+  position: relative;
+}
+
+#primary-nav .dropdown-menu > li.active span:after {
+  transform: translateY(0px) rotate(90deg);
+}
+
+@include tablet-x {
+  #primary-nav .dropdown-menu > li {
+    float: left;
+    width: 25%;
+  }
+}
+
+#primary-nav .dropdown-menu a {
+  color: #fff;
+  text-transform: capitalize;
+  font-size: 12px;
+}
+
+#primary-nav .dropdown-menu a:hover {
+  background: none;
+  color: #2BABE2;
+}
+
+@include tablet-x {
+  #primary-nav .dropdown-menu a {
+    padding: 0;
+  }
+}
+
+#primary-nav .dropdown-menu h3 {
+  margin: 0;
+}
+
+#primary-nav .dropdown-menu h3 a {
+  color: #fff;
+  font-size: 14px;
+}
+
+#primary-nav .dropdown-menu h3 a .open {
+  background: none;
+  color: inherit;
+}
+
+#primary-nav .dropdown-menu h3 a:hover {
+  color: #00aeef;
+}
+
+@include tablet-x {
+  #primary-nav .dropdown-menu h3 a {
+    color: #fff;
+    font-size: 13px;
+    letter-spacing: 0;
+    text-transform: uppercase;
+  }
+}
+
+#primary-nav .dropdown-menu span {
+  width: 30px;
+  height: 25px;
+}

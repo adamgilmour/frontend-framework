@@ -1,0 +1,79 @@
+/* =============================================================================
+// FONTS
+/* ============================================================================= */
+
+@font-face {
+    font-family: 'OpenSans';
+    src: url('../font/opensans-regular-webfont.eot');
+    src: url('../font/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/opensans-regular-webfont.woff2') format('woff2'),
+         url('../font/opensans-regular-webfont.woff') format('woff'),
+         url('../font/opensans-regular-webfont.ttf') format('truetype'),
+         url('../font/opensans-regular-webfont.svg#open_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+/* =============================================================================
+// TYPOGRAPHY
+/* ============================================================================= */
+
+body {
+    font-family: 'OpenSans', sans-serif;
+    color: $brand-neutral;
+    font-size: 14px; 
+} 
+h1,h2,h3,h4 {
+    margin: 0;
+    text-transform:uppercase;
+    line-height: 1em
+}
+
+h1 {
+    font-size: 42px;
+
+    @include tablet-y {
+        font-size: 55px;
+    }
+}
+
+h2 {
+    font-size: 25px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+p {
+    font-family: 'OpenSans', sans-serif;
+    margin: 0 0 20px;
+}
+
+a {
+    color: $brand-secondary;
+    text-decoration: none;
+    @include transition(.2s);
+
+    &:hover,&:active {
+        color: $brand-secondary + 50%;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+em {
+    font-size: 20px;
+}
+::selection {
+    background: $brand-primary;
+}

@@ -1,0 +1,38 @@
+#header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background:#fff;
+	z-index: 100;
+
+	@include tablet-x {
+		border-bottom: 1px solid #ccc;
+	}
+
+	.left {
+		float: left;
+
+		.logo {
+			padding: 10px 15px;
+			display: block;
+
+			@include tablet-x {
+				padding: 20px 30px;
+			}
+
+			img {
+				max-width: 120px;
+
+				@include tablet-x {
+					max-width: none;
+				}
+			}
+
+		}
+
+	}
+	.right {
+		float: right;
+	}
+}

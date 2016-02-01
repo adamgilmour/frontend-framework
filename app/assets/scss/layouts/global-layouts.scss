@@ -1,0 +1,10 @@
+/*vertical align blocks*/
+.vert-align {
+	display: table;
+	height: 100%;
+    width: 100%;
+}
+.vert-cent {
+	display: table-cell;
+	vertical-align: middle;
+}

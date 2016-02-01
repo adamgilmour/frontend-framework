@@ -1,0 +1,57 @@
+.intro-scroll {
+	position: relative;
+	padding-left: 20px;
+    padding-right: 20px;
+
+	.scroll-down-wrap {
+		position: absolute;
+		left: 0;
+		bottom: 80px;
+		width: 100%;
+		text-align: center;
+
+		span {
+			font-size: 20px;
+			cursor: pointer;
+			position: relative;
+			@include transition(.2s);
+
+			/*media query*/
+			@include tablet-y {
+				font-size: 40px;
+			}
+
+			&:before,&:after {
+				font-family: 'material-design';
+			}
+			&:before {
+				content: "\f26c";
+				font-size: 40px;
+
+				/*media query*/
+				@include tablet-y {
+					font-size: 80px;
+				}
+
+			}
+			&:after {
+				content: "\f2f2";
+				position: absolute;
+			    text-align: center;
+			    left: 0;
+			    bottom: 8px;
+			    width: 100%;
+
+			    /*media query*/
+			    @include tablet-y {
+					bottom: 16px;
+				}
+
+			}
+
+			&:hover {
+				color: $brand-primary;
+			} 
+		}
+	}
+}
