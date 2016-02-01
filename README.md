@@ -14,7 +14,7 @@ This project is designed to provide a starting point for static website builds. 
 
 
 ## Installation
-* `git clone https://github.com/danielmorgan/frontend-boilerplate.git`
+* `git clone https://github.com/adamgilmour/frontend-framework.git`
 * Run `npm install` to install dependencies defined in `package.json`. This will install Gulp and all the plugins it needs to do things like compile Sass to CSS.
 * `gulp` to run the default Gulp task. [BrowserSync](https://github.com/BrowserSync/browser-sync) will start up a server at `http://localhost:3000` and open it in your default browser.
 * Make changes in your favourite editor. When you save a file Gulp will run the defined tasks on it and BrowserSync will refresh your browser.
